@@ -1,0 +1,24 @@
+
+#home_header{
+    width: 100%;
+    height: 100px;
+    background-color: aqua;
+}
+
+ul{
+    padding-top: 2%;
+    margin-left: 60%;
+    font-size: 2rem;
+}
+
+.work_div{
+    height: 500px;
+    background-color: #12364c;
+    display: flex;
+}
+
+#Svg_main{
+    background-color: #fff;
+    width:200px ;
+    height:200px;
+}

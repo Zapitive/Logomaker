@@ -1,0 +1,32 @@
+
+#home_header{
+    width: 100%;
+    height: 100px;
+    background-color: aqua;
+}
+
+ul{
+    padding-top: 2%;
+    margin-left: 60%;
+    font-size: 2rem;
+}
+
+#text_div{
+    height: 500px;
+    background-color: #12364c;
+}
+
+#home_div{
+    height: 500px;
+    background-color: #65423c;
+}
+
+#icon_div{
+    height: 500px;
+    background-color: #ac1569;
+}
+
+#customize_div{
+    height: 500px;
+    background-color: #a0c010;
+}
