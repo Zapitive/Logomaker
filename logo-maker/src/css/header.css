@@ -12,13 +12,33 @@ ul{
 }
 
 .work_div{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
     height: 500px;
-    background-color: #12364c;
-    display: flex;
+    background-color: #ff20fc;
 }
 
 #Svg_main{
     background-color: #fff;
     width:200px ;
     height:200px;
+}
+
+#app_div{
+    display: flex;
+    background-color: #12364c;
+}
+
+#icon_main{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    row-gap: 10px;
+    column-gap: 30px;
+}
+
+.svg_icon{
+    max-width: 80px;
+    max-height: 80px;
 }

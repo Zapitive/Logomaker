@@ -1,7 +1,8 @@
-import React, { useState,useReducer } from 'react'
+import React, { useState,useReducer, useEffect } from 'react'
 import * as FontAwesome from "react-icons/fa";
 
-export default function SvgContainer() {
+export default function SvgContainer({name}) {
+  const [iconName,setIconName] = useState("FaApple")
 
     const reducer = (state,action) =>{
         switch(action.type){
@@ -9,13 +10,16 @@ export default function SvgContainer() {
             return state
         }
       }
+
+      
     
        const handleIconClick = (e)=>{
            e.preventDefault()
           console.log("clicked icon")
+          setIconName(name)
       }
 
-    const [iconName,setIconName] = useState("FaApple")
+    
     const [state,dispatch] = useReducer(reducer,{color:"#f001f4",fontSize:"120"})
     
  
@@ -31,6 +35,7 @@ export default function SvgContainer() {
       };
 
       
+
   return (
     <div id='Svg_main'>
         <svg width="200px" height="200px" >
