@@ -25,22 +25,18 @@ function App() {
     setIconname(e)
   }
 
-  const callbackText = (e) =>{
-    const textvalues = e.map((e) => e);
-    setTitle(textvalues[0])
-    setSlogan(textvalues[1])
-  }
+  
   
   return (
     <Router>
-      <AppContext.Provider>
+      <AppContext.Provider value={{setTitle,setSlogan,title,slogan,iconname}}>
     <div>
       <Header />
       <div id="app_div">
-        {iconname !=="" && <SvgContainer name={iconname} title={title} slogan={slogan} />}
+        <SvgContainer name={iconname} slogan={slogan} />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/text" element={<Text parentCallbackText={callbackText} />} />
+          <Route path="/text" element={<Text/>} />
           <Route path="/icon" element={<Icon parentCallback={callback} />} />
           <Route path="/customize" element={<Customize />} />
         </Routes>

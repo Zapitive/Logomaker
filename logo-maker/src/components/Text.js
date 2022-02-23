@@ -1,18 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import LogoTitle from "./uiHome/LogoTitle";
 
-function Text({parentCallbackText}){
-
-    const callback = (e)=>{
-        // e.map((ed) => {
-        //     console.log(ed)
-        // })
-       parentCallbackText(e)
-    }
+function Text(){
     
     return(
             <div className="work_div">
-                 <LogoTitle parentCallback={callback}/>
+                 <LogoTitle/>
             </div>
     )
 

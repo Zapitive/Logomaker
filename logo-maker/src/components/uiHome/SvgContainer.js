@@ -1,15 +1,10 @@
-import React, { useState,useReducer, useEffect} from 'react'
+import React, { useReducer, useEffect, useContext} from 'react'
 import * as FontAwesome from "react-icons/fa";
 import Text from 'react-svg-text';
-import LogoTitle from './LogoTitle';
+import { AppContext } from '../../App';
 
-
-
-
-export default function SvgContainer({name,title,slogan}) {
-  const [iconName,setIconName] = useState("FaApple")
-  const [logotitle,setLogoTitle] = useState("Company name")
-  const [logoslogan,setLogoSlogan] = useState("Slogan")
+export default function SvgContainer() {
+  const {title,slogan,iconname} = useContext(AppContext)
 
     const reducer = (state,action) =>{
         switch(action.type){
@@ -17,11 +12,11 @@ export default function SvgContainer({name,title,slogan}) {
             return state
         }
       }
-      useEffect(()=>{
-        setIconName(name)
-        setLogoSlogan(slogan)
-        setLogoTitle(title)
-    },[logotitle][logoslogan])
+    //   useEffect(()=>{
+    //     setIconName(name)
+    //     setLogoSlogan(slogan)
+    //     setLogoTitle(title)
+    // },[logotitle][logoslogan])
     
        const handleIconClick = (e)=>{
            e.preventDefault()
@@ -32,7 +27,7 @@ export default function SvgContainer({name,title,slogan}) {
     const [state,dispatch] = useReducer(reducer,{color:"#f001f4",fontSize:"120"})
     
  
-    const icon = React.createElement(FontAwesome[name],
+    const icon = React.createElement(FontAwesome[iconname],
         {style: {fontSize: state.fontSize,color: state.color},
         onClick: handleIconClick
     });
@@ -48,9 +43,9 @@ export default function SvgContainer({name,title,slogan}) {
   return (
     <div id='Svg_main'>
         <svg width="500px" height="500px" >
-            {icon}
-            <Text verticalAnchor="start">{logotitle}</Text>
-            <Text verticalAnchor="start" x={170} y={175}>{logoslogan}</Text>
+            {iconname!=="" && icon}
+            <Text verticalAnchor="start">{title}</Text>
+            <Text verticalAnchor="start" x={170} y={175}>{slogan}</Text>
         </svg>
     </div>
   )

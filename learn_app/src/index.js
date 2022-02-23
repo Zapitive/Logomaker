@@ -5,7 +5,7 @@ import RouteApp from './RouteApp'
 import HooksApp from './HooksApp'
 
 ReactDOM.render(
-    <RouteApp />,
+    <HooksApp />,
   document.getElementById('root')
 );
 
