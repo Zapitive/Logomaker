@@ -1,9 +1,11 @@
-import React, { useState,useReducer } from 'react'
+import React, { useReducer } from 'react'
 import * as FontAwesome from "react-icons/fa";
+
+
 
 export default function Icongenerator({name,parentCallback}) {
 
-  const [selectedIcon,setSelectedIcon] = useState("")
+
 
   const reducer = (state,action) =>{
     switch(action.type){

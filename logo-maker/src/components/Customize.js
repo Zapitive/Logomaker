@@ -1,10 +1,13 @@
 import React from "react";
+import ColorPicker from "./uiHome/ColorPicker";
+import TextCustomize from "./uiHome/TextCustomize";
 
 function Customize(){
 
     return(
             <div className="work_div">
-                  <h1>Customize</h1>
+                <TextCustomize />
+                  <ColorPicker />
             </div>
     )
 

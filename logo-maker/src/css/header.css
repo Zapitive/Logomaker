@@ -20,9 +20,10 @@ ul{
 }
 
 #Svg_main{
+    margin: auto;
     background-color: #fff;
-    width:200px ;
-    height:200px;
+    width:400px ;
+    height:400px;
 }
 
 #app_div{
