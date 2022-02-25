@@ -1,18 +1,12 @@
-import React,{useReducer, useState} from 'react'
+import React from 'react'
 import * as FontAwesome from "react-icons/fa";
 import Icongenerator from './Icongenerator';
 
 
 
-export default function Iconselection({grandParentCallback}) {
+export default function Iconselection() {
   
-  const [icon,setIcon] = useState("")
-
-  const callback = (iconname) =>{
-    setIcon(iconname)
-    // console.log(iconname)
-    grandParentCallback(iconname)
-  }
+  
 
   const iconnames = ["FaBimobject",
   "FaBtc",
@@ -26,7 +20,7 @@ export default function Iconselection({grandParentCallback}) {
   "FaTools"
 ]
   const listItems = iconnames.map((number) =>
-    <div className='svg_icon' key={number}><Icongenerator name={number} parentCallback={callback}/></div>);
+    <div className='svg_icon' key={number}><Icongenerator name={number} /></div>);
 
   return (
     <div id='icon_main'>

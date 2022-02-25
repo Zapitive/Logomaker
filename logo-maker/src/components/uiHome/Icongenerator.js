@@ -1,11 +1,12 @@
-import React, { useReducer } from 'react'
+import React, { useContext, useReducer } from 'react'
 import * as FontAwesome from "react-icons/fa";
+import { AppContext } from '../../App';
 
 
 
-export default function Icongenerator({name,parentCallback}) {
+export default function Icongenerator({name}) {
 
-
+  const{setIconname} = useContext(AppContext)
 
   const reducer = (state,action) =>{
     switch(action.type){
@@ -14,8 +15,9 @@ export default function Icongenerator({name,parentCallback}) {
     }
   }
 
-  const onIconClick = (e)=>{
-    parentCallback(name)
+  const onIconClick = ()=>{
+    setIconname(name)
+    
 }
 
   const [state,dispatch] = useReducer(reducer,{color:"#f4f104",fontSize:"80"})

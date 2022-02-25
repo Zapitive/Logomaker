@@ -16,28 +16,28 @@ function App() {
 //     console.log("iconname logged")
 // })
 
+  const[titlecolor,setTitleColor]=useState({r: '225',g: '155',b: '99',a: '2'})
 
   const [iconname,setIconname] = useState("")
   const [title,setTitle] = useState("")
   const [slogan,setSlogan] = useState("")
-
-  const callback = (e) =>{
-    setIconname(e)
-  }
+  const [x,setX] = useState(170)
+  const [y,setY] = useState(160)
 
   
   
   return (
     <Router>
-      <AppContext.Provider value={{setTitle,setSlogan,title,slogan,iconname}}>
+      <AppContext.Provider value={{setTitle,setX,setY,setSlogan,setIconname,setTitleColor,
+        title,slogan,iconname,x,y,titlecolor}}>
     <div>
       <Header />
       <div id="app_div">
-        <SvgContainer name={iconname} slogan={slogan} />
+        <SvgContainer/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/text" element={<Text/>} />
-          <Route path="/icon" element={<Icon parentCallback={callback} />} />
+          <Route path="/icon" element={<Icon/>} />
           <Route path="/customize" element={<Customize />} />
         </Routes>
       </div>

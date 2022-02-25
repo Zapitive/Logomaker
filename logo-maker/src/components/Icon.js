@@ -3,18 +3,11 @@ import * as FontAwesome from "react-icons/fa";
 import Iconselection from "./uiHome/Iconselection";
 
 
-function Icon({parentCallback}){
-
-  
-
-  const Callback = (iconname) =>{
-    parentCallback(iconname)
-  }
-
+function Icon(){
     return(
             <div className="work_div">
               <h1>Select Icon</h1>
-              <Iconselection grandParentCallback={Callback} />
+              <Iconselection  />
             </div>
     )
 

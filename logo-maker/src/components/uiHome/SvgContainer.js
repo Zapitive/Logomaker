@@ -1,10 +1,10 @@
-import React, { useReducer, useEffect, useContext} from 'react'
+import React, { useReducer, useContext} from 'react'
 import * as FontAwesome from "react-icons/fa";
 import Text from 'react-svg-text';
 import { AppContext } from '../../App';
 
 export default function SvgContainer() {
-  const {title,slogan,iconname} = useContext(AppContext)
+  const {title,slogan,iconname,x,y,titlecolor} = useContext(AppContext)
 
     const reducer = (state,action) =>{
         switch(action.type){
@@ -17,7 +17,10 @@ export default function SvgContainer() {
     //     setLogoSlogan(slogan)
     //     setLogoTitle(title)
     // },[logotitle][logoslogan])
-    
+    const titlestyle={
+      fontSize:'2em',
+      fill:`rgba(${ titlecolor.r }, ${titlecolor.g }, ${ titlecolor.b }, ${ titlecolor.a })`
+    }
        const handleIconClick = (e)=>{
            e.preventDefault()
           
@@ -27,16 +30,10 @@ export default function SvgContainer() {
     const [state,dispatch] = useReducer(reducer,{color:"#f001f4",fontSize:"120"})
     
  
-    const icon = React.createElement(FontAwesome[iconname],
+    const icon = React.createElement(FontAwesome[iconname || "FaApple"],
         {style: {fontSize: state.fontSize,color: state.color},
         onClick: handleIconClick
     });
-
-    // const Icon = (props) => {
-    //     const { iconName, size, color } = props;
-    //     const icon = React.createElement(FontAwesome[iconName]);
-    //     return <div style={{ fontSize: size, color: color }} >{icon}</div>;
-    //   };
 
       
 
@@ -44,7 +41,7 @@ export default function SvgContainer() {
     <div id='Svg_main'>
         <svg width="500px" height="500px" >
             {iconname!=="" && icon}
-            <Text verticalAnchor="start">{title}</Text>
+            <Text verticalAnchor="start" x={x} y={y} style={titlestyle} >{title}</Text>
             <Text verticalAnchor="start" x={170} y={175}>{slogan}</Text>
         </svg>
     </div>

@@ -43,3 +43,22 @@ ul{
     max-width: 80px;
     max-height: 80px;
 }
+
+.customizeposi{
+    display: grid;
+    grid-template-columns: 50px 50px 50px;
+    grid-template-rows: 30px 30px 30px;
+}
+
+.customizeposi .Up{
+    grid-column-start: 2;
+}
+
+.customizeposi .Down{
+    grid-column-start: 2;
+    grid-row-start: 3;
+}
+
+.customizeposi > span{
+    margin-top: 6px;
+}

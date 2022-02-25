@@ -1,15 +1,8 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 import { SketchPicker } from 'react-color'
 import reactCSS from 'reactcss'
 
-export default function ColorPicker({ParentCallback}) {
-  const[color,setColor]=useState({r: '225',
-    g: '155',
-    b: '99',
-    a: '2'})
-    const[g,setG]=useState('255')
-    const[b,setB]=useState('152')
-    const[a,setA]=useState('80')
+export default function TextColor({ParentCallback,color}) {
     const[showPicker,setShowPicker]=useState(false)
 
     const onClick = () => {
@@ -21,8 +14,7 @@ export default function ColorPicker({ParentCallback}) {
     };
 
     const onChange = (colors) => {
-        setColor(colors.rgb)
-        ParentCallback(color)
+        ParentCallback(colors.rgb)
       };
     
 
