@@ -24,7 +24,8 @@ export default function Iconselection() {
   "FaRegFutbol",
   "FaJedi",
   "FaApple",
-  "FaTeamspeak"
+  "FaTeamspeak",
+  "FaFemale"
 ]
   const listItems = iconnames.map((number) =>
     <div className='svg_icon' key={number}><Icongenerator name={number} /></div>);

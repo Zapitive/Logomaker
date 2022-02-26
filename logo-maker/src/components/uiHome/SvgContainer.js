@@ -34,7 +34,7 @@ export default function SvgContainer() {
     }
     
     
-    const translate="rotate(-20 "+iconPosi.x+" " +iconPosi.y+") translate("+iconPosi.x+" " +iconPosi.y+")"
+    const translate=" translate("+iconPosi.x+" " +iconPosi.y+")"
 
   return (
     <div id='Svg_main'>
