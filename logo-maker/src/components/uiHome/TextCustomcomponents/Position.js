@@ -6,7 +6,6 @@ export default function Position({handleposition,currentx,currenty,name}) {
     const handleClick = (e)=>{
       const{name} = e.target
       if(name==='Left'){
-        console.log(values[0])
         values[0] = values[0] - 5;
       }
       else if(name==='Right'){

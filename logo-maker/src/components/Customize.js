@@ -1,26 +1,33 @@
-import React, { useState } from "react";
-import ColorPicker from "./uiHome/ColorPicker";
-
+import React, { useContext, useState } from "react";
+import { AppContext } from "../App";
+import Position from "./uiHome/TextCustomcomponents/Position";
+import TextColor from "./uiHome/TextCustomcomponents/TextColor";
 
 function Customize(){   
+    const {setIconPosi,iconPosi,iconcolor,setIconColor,bgcolor,setBgColor}=useContext(AppContext)
 
-    const[color,setColor]=useState({r: '225',
-    g: '155',
-    b: '99',
-    a: '2'})
-
-    const callback = (e) =>{
-        setColor(e)
+    const positionChange = (e) =>{
+        const values = e
+        const x=values[0],y=values[1]
+        setIconPosi({x,y})
     }
 
-    const styles ={
-        color:`rgba(${ color.r }, ${color.g }, ${ color.b }, ${ color.a })`
+    const colorChange = (e) =>{
+        setIconColor(e)
+    }
+
+    const BgChange = (e) =>{
+        setBgColor(e)
     }
 
     return(
             <div className="work_div">
-                <h1 style={styles}>Hello</h1>
-                <ColorPicker ParentCallback={callback}/>
+                <h1>Icon Position:</h1>
+                <Position handleposition={positionChange} currentx={iconPosi.x} currenty={iconPosi.y} />
+                <h1>Icon Color:</h1>
+                <TextColor ParentCallback={colorChange} color={iconcolor}/>
+                <h1>Background Color:</h1>
+                <TextColor ParentCallback={BgChange} color={bgcolor}/>
             </div>
     )
 

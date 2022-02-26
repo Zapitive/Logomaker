@@ -7,7 +7,7 @@
 
 ul{
     padding-top: 2%;
-    margin-left: 60%;
+    float: right;
     font-size: 2rem;
 }
 
@@ -17,6 +17,10 @@ ul{
     margin-right: auto;
     height: 500px;
     background-color: #ff20fc;
+}
+
+.work_div > h1{
+    display: inline-block;
 }
 
 #Svg_main{

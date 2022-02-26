@@ -1,4 +1,52 @@
+@font-face {
+    font-family: 'airstream';
+    src: url('../fonts/Airstream-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ArchitectsDaughter';
+    src: url('../fonts/ArchitectsDaughter.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: '2Dumb';
+    src: url('../fonts/2Dumb-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: '3Dumb';
+    src: url('../fonts/3Dumb-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'alphaecho';
+    src: url('../fonts/alpha_echo-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Aquiline';
+    src: url('../fonts/AquilineTwo-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'atomicage';
+    src: url('../fonts/atomicage-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 *{
     margin: 0;
     padding: 0;
+}
+
+h1{
+    font-family: '3Dumb';
 }

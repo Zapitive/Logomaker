@@ -18,6 +18,7 @@ function Header(){
                     <Link style={styles} to="/text">Text</Link>
                     <Link style={styles} to="/icon">Select Icon</Link>
                     <Link style={styles} to="/customize">Customize</Link>
+                    <Link style={styles} to="/download">Download</Link>
                 </ul>
         </div>
     )
