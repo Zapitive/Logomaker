@@ -17,6 +17,7 @@ export default function SvgIcon() {
     const iconstyle ={
         fontSize: state.fontSize,
         color: `rgba(${iconcolor.r }, ${iconcolor.g }, ${iconcolor.b }, ${iconcolor.a })`,
+        stroke:"#fff"
       }
 
     const icon = React.createElement(FontAwesome[iconname || "FaApple"],

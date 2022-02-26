@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import RouteApp from './RouteApp'
 import HooksApp from './HooksApp'
+import DownloadApp from './DownloadApp'
 
 ReactDOM.render(
-    <HooksApp />,
+    <DownloadApp />,
   document.getElementById('root')
 );
 

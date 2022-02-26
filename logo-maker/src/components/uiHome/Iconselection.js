@@ -25,7 +25,19 @@ export default function Iconselection() {
   "FaJedi",
   "FaApple",
   "FaTeamspeak",
-  "FaFemale"
+  "FaFemale",
+  "FaGratipay",
+  "FaRaspberryPi",
+  "FaThermometerThreeQuarters",
+  "FaTaxi",
+  "FaTools",
+  "FaRegGem",
+  "FaGalacticRepublic",
+  "FaYinYang",
+  "FaRegSnowflake",
+  "FaRegFutbol",
+  "FaJedi",
+  "FaApple",
 ]
   const listItems = iconnames.map((number) =>
     <div className='svg_icon' key={number}><Icongenerator name={number} /></div>);

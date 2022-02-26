@@ -7,10 +7,12 @@ import 'react-awesome-slider/dist/styles.css';
 function Text(){
     
     return(
-            <div className="work_div">
-                    <LogoTitle/>
-                    <LogoSlogan />
+        <div className="work_div">
+            <div className="texts_div">
+                <LogoTitle />
+                <LogoSlogan />
             </div>
+        </div>
     )
 
 }

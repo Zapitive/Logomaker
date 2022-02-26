@@ -1,12 +1,17 @@
-import React, { useContext, useRef } from 'react'
+import React, { useContext } from 'react'
 import { AppContext } from '../../App';
 import Position from './TextCustomcomponents/Position';
 import TextColor from './TextCustomcomponents/TextColor';
 import FontStyle from './TextCustomcomponents/FontStyle';
+import Stroke from './TextCustomcomponents/Stroke';
+import FontSize from './TextCustomcomponents/FontSize';
+import TextAngle from './TextCustomcomponents/TextAngle';
+import SloganStroke from './TextCustomcomponents/SloganStroke';
 
 export default function () {
-    const {slogan,setSlogan,sloganPosi,setSloganPosi,setSloganColor,slogancolor,setSloganFontStyle} = useContext(AppContext)
-    const sloganRef = useRef(null)
+    const {slogan,setSlogan,sloganPosi,setSloganPosi,setSloganColor,slogancolor,setSloganFontStyle,setSloganAngle,setSloganSize,
+        sloganAngle,sloganSize
+    } = useContext(AppContext)
 
     const textChange = (e)=>{
         setSlogan(e.target.value) 
@@ -23,14 +28,25 @@ export default function () {
         setSloganFontStyle(e)
     }
 
+    const callbackSize = (e) =>{
+        setSloganSize(e)
+    }
+
+    const callbackAngle = (e) =>{
+        setSloganAngle(e)
+    }
+
   return (
-    <div>
+    <div className='customtext_div'>
         
-        <input type="text" name='slogan' placeholder="Slogan" onChange={textChange} ref={sloganRef}/>
-        {sloganRef.current && <>
+        <input type="text" name='slogan' placeholder="Slogan" onChange={textChange} />
+        {slogan && <>
         <Position handleposition={positionChange} currentx={sloganPosi.x} currenty={sloganPosi.y} name={slogan}/>
         <TextColor ParentCallback={callback} color={slogancolor}/>
         <FontStyle ParentCallback={callbackfont} />
+        <FontSize ParentCallback={callbackSize} size={sloganSize}/>
+        <TextAngle ParentCallback={callbackAngle} angle={sloganAngle} />
+        <SloganStroke />
         </>
         }
     </div>

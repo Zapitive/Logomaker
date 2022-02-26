@@ -12,6 +12,7 @@ ul{
 }
 
 .work_div{
+    overflow: auto;
     width: 50%;
     margin-left: auto;
     margin-right: auto;
@@ -65,4 +66,13 @@ ul{
 
 .customizeposi > span{
     margin-top: 6px;
+}
+
+.customtext_div{
+    width: 50%;
+}
+
+.texts_div{
+    display: flex;
+    flex-direction:row;
 }
