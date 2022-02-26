@@ -1,12 +1,9 @@
-import React, { useContext } from 'react'
-import { AppContext } from '../../../App'
+import React from 'react'
 
-export default function () {
-
-    const {setFontStyle} = useContext(AppContext)
+export default function ({ParentCallback}) {
 
     const handleChange =(e)=>{
-        setFontStyle(e.target.value)
+        ParentCallback(e.target.value)
     }
 
   return (

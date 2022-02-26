@@ -1,11 +1,10 @@
 import React, { useReducer, useContext} from 'react'
-import * as FontAwesome from "react-icons/fa";
 import Text from 'react-svg-text';
 import { AppContext } from '../../App';
 import SvgIcon from './SvgIcon';
 
 export default function SvgContainer() {
-  const {title,slogan,iconname,titlePosi,titlecolor,iconPosi,bgcolor,fontStyle,sloganPosi,slogancolor} = useContext(AppContext)
+  const {title,slogan,iconname,titlePosi,titlecolor,iconPosi,bgcolor,fontStyle,sloganPosi,slogancolor,sloganfontStyle,titleSize,titleAngle} = useContext(AppContext)
 
     const reducer = (state,action) =>{
         switch(action.type){
@@ -20,13 +19,14 @@ export default function SvgContainer() {
     // },[logotitle][logoslogan])
     
     const titlestyle={
-      fontSize:'2em',
+      fontSize:titleSize,
       fill:`rgba(${ titlecolor.r }, ${titlecolor.g }, ${ titlecolor.b }, ${ titlecolor.a })`,
       fontFamily: fontStyle
     }
 
     const sloganstyle={
-      fill:`rgba(${slogancolor.r}, ${slogancolor.g }, ${ slogancolor.b }, ${ slogancolor.a })`
+      fill:`rgba(${slogancolor.r}, ${slogancolor.g }, ${ slogancolor.b }, ${ slogancolor.a })`,
+      fontFamily: sloganfontStyle
     }
 
     const svgstyle={
@@ -38,12 +38,12 @@ export default function SvgContainer() {
 
   return (
     <div id='Svg_main'>
-        <svg width="400px" height="400px" style={svgstyle}>
+        <svg id='logo_svg' width="400px" height="400px" style={svgstyle}>
         {iconname!=="" && 
         <g transform = {translate}>
           <SvgIcon />
         </g>}
-            <Text verticalAnchor="start" x={titlePosi.x} y={titlePosi.y} style={titlestyle} >{title}</Text>
+            <Text verticalAnchor="start" x={titlePosi.x} y={titlePosi.y} angle={titleAngle} style={titlestyle} >{title}</Text>
             <Text verticalAnchor="start" x={sloganPosi.x} y={sloganPosi.y} style={sloganstyle}>{slogan}</Text>
         </svg>
     </div>

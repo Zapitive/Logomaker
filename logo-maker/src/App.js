@@ -17,28 +17,28 @@ function App() {
 
   const[titlecolor,setTitleColor]=useState({r: '225',g: '155',b: '99',a: '2'})
   const[slogancolor,setSloganColor]=useState({r: '225',g: '155',b: '99',a: '2'})
-  const[iconcolor,setIconColor]=useState({r: '225',g: '155',b: '99',a: '2'})
+  const[iconcolor,setIconColor]=useState({r: '45',g: '42',b: '50',a: '1'})
   const[bgcolor,setBgColor]=useState({r: '255',g: '255',b: '255',a: '100'})
   const[iconPosi,setIconPosi]=useState({x:125,y:125})
   const [fontStyle,setFontStyle] = useState("")
+  const [titleAngle,setTitleAngle] = useState(0)
+  const [titleSize,setTitleSize] = useState(52)
   const [sloganfontStyle,setSloganFontStyle] = useState("")
   const [iconname,setIconname] = useState("")
   const [title,setTitle] = useState("")
   const [slogan,setSlogan] = useState("")
   const[sloganPosi,setSloganPosi]=useState({x:125,y:125})
   const[titlePosi,setTitlePosi]=useState({x:125,y:125})
-  const [x,setX] = useState(170)
-  const [y,setY] = useState(160)
-
+  
 //   useEffect(()=>{
 //     console.log(bgcolor)
 // })
   
   return (
     <Router>
-      <AppContext.Provider value={{setTitle,setX,setY,setSlogan,setIconname,setTitleColor,setIconPosi,setIconColor,
-        setBgColor,setFontStyle,setSloganColor,setSloganFontStyle,setSloganPosi,setTitlePosi,
-        title,slogan,iconname,x,y,titlecolor,iconPosi,iconcolor,bgcolor,fontStyle,sloganPosi,slogancolor,sloganfontStyle,titlePosi}}>
+      <AppContext.Provider value={{setTitle,setSlogan,setIconname,setTitleColor,setIconPosi,setIconColor,
+        setBgColor,setFontStyle,setSloganColor,setSloganFontStyle,setSloganPosi,setTitlePosi,setTitleSize,setTitleAngle,
+        title,slogan,iconname,titlecolor,iconPosi,iconcolor,bgcolor,fontStyle,sloganPosi,slogancolor,sloganfontStyle,titlePosi,titleSize,titleAngle}}>
     <div>
       <Header />
       <div id="app_div">

@@ -2,9 +2,10 @@ import React, { useContext, useRef } from 'react'
 import { AppContext } from '../../App';
 import Position from './TextCustomcomponents/Position';
 import TextColor from './TextCustomcomponents/TextColor';
+import FontStyle from './TextCustomcomponents/FontStyle';
 
 export default function () {
-    const {slogan,setSlogan,sloganPosi,setSloganPosi,setSloganColor,slogancolor} = useContext(AppContext)
+    const {slogan,setSlogan,sloganPosi,setSloganPosi,setSloganColor,slogancolor,setSloganFontStyle} = useContext(AppContext)
     const sloganRef = useRef(null)
 
     const textChange = (e)=>{
@@ -18,6 +19,9 @@ export default function () {
     const callback = (e)=>{
         setSloganColor(e)
     }
+    const callbackfont = (e)=>{
+        setSloganFontStyle(e)
+    }
 
   return (
     <div>
@@ -26,6 +30,7 @@ export default function () {
         {sloganRef.current && <>
         <Position handleposition={positionChange} currentx={sloganPosi.x} currenty={sloganPosi.y} name={slogan}/>
         <TextColor ParentCallback={callback} color={slogancolor}/>
+        <FontStyle ParentCallback={callbackfont} />
         </>
         }
     </div>
