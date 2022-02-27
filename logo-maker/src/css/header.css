@@ -2,7 +2,7 @@
 #home_header{
     width: 100%;
     height: 100px;
-    background-color: aqua;
+    background-color:  #E3B448;
 }
 
 ul{
@@ -17,7 +17,7 @@ ul{
     margin-left: auto;
     margin-right: auto;
     height: 500px;
-    background-color: #fcba03;
+    background-color: #3A6B35;
 }
 
 .work_div > h1{
@@ -34,7 +34,7 @@ ul{
 #app_div{
     overflow: auto;
     display: flex;
-    background-color: #12364c;
+    background-color: #CBD18F;
 }
 
 #icon_main{
@@ -43,6 +43,7 @@ ul{
     grid-template-rows: auto auto auto auto;
     row-gap: 10px;
     column-gap: 30px;
+    margin: 5%;
 }
 
 .svg_icon{
@@ -52,28 +53,164 @@ ul{
 
 .customizeposi{
     display: grid;
-    grid-template-columns: 50px 50px 50px;
-    grid-template-rows: 30px 30px 30px;
+    grid-template-columns: 75px 75px 75px;
+    grid-template-rows: 50px 50px 50px;
+    margin-left: 10px;
 }
 
 .customizeposi .Up{
     grid-column-start: 2;
+    background-color: #FCEDDA;
+    color:#EE4E34;
+    font-size: 15px;
+    border: 2px solid #000;
+    border-radius: 20px;
+}
+
+.customizeposi .Up:hover{
+    grid-column-start: 2;
+    background-color: #FCEDDA;
+    font-size: 20px;
+    border: 2px solid #000;
+    box-shadow: 0px -4px #FCEDDA;
+}
+
+.customizeposi .Right{
+    background-color: #FCEDDA;
+    color:#EE4E34;
+    font-size: 15px;
+    border: 2px solid #000;
+    border-radius: 20px;
+}
+
+.customizeposi .Right:hover{
+    background-color: #FCEDDA;
+    font-size: 20px;
+    border: 2px solid #000;
+    box-shadow: 4px 0px #FCEDDA;
+}
+
+.customizeposi .Left{
+    background-color: #FCEDDA;
+    color:#EE4E34;
+    font-size: 15px;
+    border: 2px solid #000;
+    border-radius: 20px;
+}
+
+.customizeposi .Left:hover{
+    background-color: #FCEDDA;
+    font-size: 20px;
+    border: 2px solid #000;
+    box-shadow: -4px 0px #FCEDDA;
 }
 
 .customizeposi .Down{
     grid-column-start: 2;
     grid-row-start: 3;
+    background-color: #FCEDDA;
+    color:#EE4E34;
+    font-size: 15px;
+    border: 2px solid #000;
+    border-radius: 20px;
 }
+
+.customizeposi .Down:hover{
+    grid-column-start: 2;
+    grid-row-start: 3;
+    background-color: #FCEDDA;
+    color:#EE4E34;
+    font-size: 15px;
+    border: 2px solid #000;
+    border-radius: 20px;
+    box-shadow: 0px 4px #FCEDDA;
+}
+
 
 .customizeposi > span{
     margin-top: 6px;
 }
 
 .customtext_div{
-    width: 50%;
+    width: 45%;
+    margin-left: 20px;
 }
 
 .texts_div{
     display: flex;
     flex-direction:row;
 }
+
+
+select {
+    background-color: #FCEDDA;
+    border: thin solid blue;
+    color: #EE4E34;
+    border-radius: 4px;
+    display: inline-block;
+    font: inherit;
+    line-height: 1.5em;
+    padding: 0.5em 3.5em 0.5em 1em;
+  
+
+  
+    margin-left: 10px;      
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  
+  
+
+  
+  select.classic {
+    background-image:
+      linear-gradient(45deg, transparent 50%, blue 50%),
+      linear-gradient(135deg, blue 50%, transparent 50%),
+      linear-gradient(to right, skyblue, skyblue);
+    background-position:
+      calc(100% - 20px) calc(1em + 2px),
+      calc(100% - 15px) calc(1em + 2px),
+      100% 0;
+    background-size:
+      5px 5px,
+      5px 5px,
+      2.5em 2.5em;
+    background-repeat: no-repeat;
+  }
+  
+  select.classic:focus {
+    background-image:
+      linear-gradient(45deg, white 50%, transparent 50%),
+      linear-gradient(135deg, transparent 50%, white 50%),
+      linear-gradient(to right, gray, gray);
+    background-position:
+      calc(100% - 15px) 1em,
+      calc(100% - 20px) 1em,
+      100% 0;
+    background-size:
+      5px 5px,
+      5px 5px,
+      2.5em 2.5em;
+    background-repeat: no-repeat;
+    border-color: grey;
+    outline: 0;
+  }
+  
+
+  .flexbox{
+      display: flex;
+      margin-top: 10px;
+  }
+
+  .slider{
+      margin: auto 0 auto 10px;
+  }
+
+  label{
+      color:  #F1AC88FF;
+      font-weight: 600;
+      
+  }

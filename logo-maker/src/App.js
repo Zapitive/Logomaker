@@ -2,7 +2,6 @@ import React, { useState,createContext, useEffect } from "react";
 import Home from "./components/Home";
 import SvgContainer from "./components/uiHome/SvgContainer";
 import Text from "./components/Text";
-import "./css/header.css"
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
 import Header from "./components/uiHome/Header";
 import Icon from "./components/Icon";

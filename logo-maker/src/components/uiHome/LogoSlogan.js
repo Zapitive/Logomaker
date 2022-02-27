@@ -38,8 +38,10 @@ export default function () {
 
   return (
     <div className='customtext_div'>
+        <div className='inp-border a2'>
+        <input className='input' type="text" name='slogan' placeholder="Slogan" onChange={textChange} />
+        </div>
         
-        <input type="text" name='slogan' placeholder="Slogan" onChange={textChange} />
         {slogan && <>
         <Position handleposition={positionChange} currentx={sloganPosi.x} currenty={sloganPosi.y} name={slogan}/>
         <TextColor ParentCallback={callback} color={slogancolor}/>

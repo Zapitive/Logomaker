@@ -8,9 +8,12 @@ export default function FontSize({ParentCallback,size}) {
         ParentCallback(e.target.value)
     }
 
+  
+
+
   return (
     <div>
-        <RangeStepInput
+        <input type="range"
                 min={12} max={100}
                 value={size} step={1}
                 onChange={handleChange}

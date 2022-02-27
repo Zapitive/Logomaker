@@ -36,14 +36,41 @@ export default function () {
     }
   return (
     <div className='customtext_div'>
-        <input type="text" name='TitleText' placeholder="Logo Title" onChange={textChange}  />
+        <div className='inp-border a1'>
+            <input className='input' type="text" name='TitleText' placeholder="Logo Title" onChange={textChange}  />
+        </div>
+        
         {title && <>
-        <Position handleposition={positionChange} currentx={titlePosi.x} currenty={titlePosi.y} name={title}/>
+            <h1>Position:</h1>
+            <Position handleposition={positionChange} currentx={titlePosi.x} currenty={titlePosi.y} name={title}/>
+
+
+        <div className='flexbox'>
+        <h1>Color:</h1>
         <TextColor ParentCallback={callback} color={titlecolor}/>
-        <FontStyle ParentCallback={callbackfont} />
-        <FontSize ParentCallback={callbackSize} size={titleSize}/>
-        <TextAngle ParentCallback={callbackAngle} angle={titleAngle} />
-        <Stroke />
+        </div>
+        <div className='flexbox'>
+            <h1>Font Style:</h1>
+            <FontStyle ParentCallback={callbackfont} />
+        </div>
+        <div className='flexbox'>
+            <h1>Font Size:</h1>
+            <div className="slider">
+                <FontSize ParentCallback={callbackSize} size={titleSize} />
+            </div> 
+        </div>
+        
+        <div className='flexbox'>
+            <h1>Angle:</h1>
+            <div className='slider'>
+                <TextAngle ParentCallback={callbackAngle} angle={titleAngle} />
+            </div>
+        </div>
+        <div className='flexbox'>
+            <h1>Stoke :</h1>
+            <Stroke />
+        </div>
+        
         </>
         }
     </div>

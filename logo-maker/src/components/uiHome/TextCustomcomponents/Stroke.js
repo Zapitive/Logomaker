@@ -25,12 +25,11 @@ export default function Stroke() {
   return (
     <div>
         <input type="checkbox" checked={titleStroke} onChange={handleChange}/>
-        <label>Stroke</label> 
         {titleStroke && 
             <div>
-                <button name='+' onClick={handleClick}>+</button>
-                <label>{titleStrokeWidth}</label>
                 <button name='-' onClick={handleClick}>-</button>
+                <label className='label'>{titleStrokeWidth}</label>
+                <button name='+' onClick={handleClick}>+</button>
                 <TextColor ParentCallback={callback} color={titleStrokeColor} />
             </div>}
     </div>

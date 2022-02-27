@@ -8,7 +8,7 @@ export default function ({ParentCallback}) {
 
   return (
     <div>
-        <select id="fonts" name="fontstyle" onChange={handleChange}>
+        <select id="fonts" name="fontstyle" onChange={handleChange} className="classic">
         <option value="Sanserif">Sanserif</option>
         <option value="airstream">airstream</option>
         <option value="ArchitectsDaughter">Architect</option>

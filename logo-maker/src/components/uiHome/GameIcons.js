@@ -17,7 +17,7 @@ export default function GameIcons({name}) {
       setIconname(name)
   }
   
-    const [state,dispatch] = useReducer(reducer,{color:"#2D2A32",fontSize:"80"})
+    const [state,dispatch] = useReducer(reducer,{color:"#EED971FF",fontSize:"80"})
     const icon = React.createElement(GI[name],{style: {fontSize: state.fontSize,color: state.color},onClick: onIconClick})
   
   

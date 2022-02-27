@@ -27,7 +27,7 @@ export default function TextColor({ParentCallback,color}) {
             background: `rgba(${ color.r }, ${color.g }, ${ color.b }, ${ color.a })`,
           },
           popover: {
-            position: 'absolute',
+            position: 'relative',
             zIndex: '3',
           },
           cover: {
