@@ -13,7 +13,7 @@ export const AppContext = createContext(null)
 
 function App() {
 
-
+  const[iconSize,setIconSize]=useState(120)
   const[background,setBackground]=useState(false)
   const[titlecolor,setTitleColor]=useState({r: '225',g: '155',b: '99',a: '2'})
   const[slogancolor,setSloganColor]=useState({r: '225',g: '155',b: '99',a: '2'})
@@ -46,9 +46,9 @@ function App() {
     <Router>
       <AppContext.Provider value={{setTitle,setSlogan,setIconname,setTitleColor,setIconPosi,setIconColor,setSloganStroke,setSloganColor,setSloganStrokeWidth,setTitleStrokeColor,setSloganStrokeColor,setSloganAngle,
         setBgColor,setFontStyle,setSloganColor,setSloganFontStyle,setSloganPosi,setTitlePosi,setTitleSize,setTitleAngle,setTitleStroke,setTitleStrokeWidth,
-        setSloganSize,setBackground,
+        setSloganSize,setBackground,setIconSize,
         title,slogan,iconname,titlecolor,iconPosi,iconcolor,bgcolor,fontStyle,sloganPosi,slogancolor,sloganfontStyle,titlePosi,titleSize,titleAngle,titleStroke,titleStrokeWidth,titleStrokeColor,
-        sloganStroke,sloganStrokeWidth,sloganStrokeColor,sloganAngle,sloganSize,background}}>
+        sloganStroke,sloganStrokeWidth,sloganStrokeColor,sloganAngle,sloganSize,background,iconSize}}>
     <div>
       <Header />
       <div id="app_div">

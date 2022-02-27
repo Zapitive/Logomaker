@@ -8,7 +8,7 @@ import TextAngle from './TextCustomcomponents/TextAngle';
 import TextColor from './TextCustomcomponents/TextColor';
 
 export default function () {
-    const {setTitlePosi,titlePosi,setTitle,title,setTitleColor,titlecolor,setFontStyle,titleSize,setTitleSize,titleAngele,setTitleAngle} = useContext(AppContext)
+    const {setTitlePosi,titlePosi,setTitle,title,setTitleColor,titlecolor,setFontStyle,titleSize,setTitleSize,titleAngle,setTitleAngle} = useContext(AppContext)
 
     const textChange = (e)=>{
             setTitle(e.target.value)    
@@ -42,7 +42,7 @@ export default function () {
         <TextColor ParentCallback={callback} color={titlecolor}/>
         <FontStyle ParentCallback={callbackfont} />
         <FontSize ParentCallback={callbackSize} size={titleSize}/>
-        <TextAngle ParentCallback={callbackAngle} angle={titleAngele} />
+        <TextAngle ParentCallback={callbackAngle} angle={titleAngle} />
         <Stroke />
         </>
         }

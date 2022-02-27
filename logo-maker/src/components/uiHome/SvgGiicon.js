@@ -1,12 +1,14 @@
 import React, { useReducer, useContext} from 'react'
-import * as FontAwesome from "react-icons/fa";
 import * as Gi from "react-icons/gi";
 import { AppContext } from '../../App';
 
-export default function SvgIcon() {
+export default function SvgGiicon() {
     const {iconname,iconcolor,iconSize} = useContext(AppContext)
 
     
+      
+      
+
 
     const iconstyle ={
         fontSize: iconSize,
@@ -15,7 +17,7 @@ export default function SvgIcon() {
       }
 
       
-      const icon = React.createElement(FontAwesome[iconname],{style: iconstyle});
+      const icon = React.createElement(Gi[iconname],{style: iconstyle});
       
       
   
@@ -23,7 +25,7 @@ export default function SvgIcon() {
 
   return (
     <>
-    {iconname && icon}
+    {icon}
     </>
   )
 }

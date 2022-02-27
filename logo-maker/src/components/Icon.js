@@ -1,5 +1,4 @@
 import React from "react";
-import * as FontAwesome from "react-icons/fa";
 import Iconselection from "./uiHome/Iconselection";
 
 

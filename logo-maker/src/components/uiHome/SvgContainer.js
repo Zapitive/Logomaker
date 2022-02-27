@@ -1,12 +1,13 @@
 import React, { useReducer, useContext} from 'react'
 import Text from 'react-svg-text';
 import { AppContext } from '../../App';
+import SvgGiicon from './SvgGiicon';
 import SvgIcon from './SvgIcon';
 
 export default function SvgContainer() {
   const {title,slogan,iconname,titlePosi,titlecolor,iconPosi,bgcolor,fontStyle,sloganPosi,slogancolor,
     sloganfontStyle,titleSize,titleAngle,titleStrokeWidth,titleStrokeColor,titleStroke,sloganStroke,
-    sloganStrokeColor,sloganStrokeWidth,sloganSize,sloganAngle
+    sloganStrokeColor,sloganStrokeWidth,sloganSize,sloganAngle,background
   } = useContext(AppContext)
 
     const reducer = (state,action) =>{
@@ -38,7 +39,7 @@ export default function SvgContainer() {
     }
 
     const svgstyle={
-      backgroundColor:`rgba(${ bgcolor.r }, ${bgcolor.g }, ${ bgcolor.b }, ${ bgcolor.a })`,
+      backgroundColor:background &&`rgba(${ bgcolor.r }, ${bgcolor.g }, ${ bgcolor.b }, ${ bgcolor.a })`,
     }
     
     
@@ -49,7 +50,7 @@ export default function SvgContainer() {
         <svg id='logo_svg' viewBox="0 0 400 400" style={svgstyle}>
         {iconname!=="" && 
         <g transform = {translate}>
-          <SvgIcon />
+          {iconname.startsWith("Fa") ? <SvgIcon /> : <SvgGiicon/>}
         </g>}
             <Text verticalAnchor="start" x={titlePosi.x} y={titlePosi.y} angle={titleAngle} style={titlestyle} >{title}</Text>
             <Text verticalAnchor="start" x={sloganPosi.x} y={sloganPosi.y} angle={sloganAngle} style={sloganstyle}>{slogan}</Text>

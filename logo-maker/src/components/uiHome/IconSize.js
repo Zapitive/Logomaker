@@ -1,7 +1,7 @@
 import React from 'react'
 import {RangeStepInput} from 'react-range-step-input';
 
-export default function FontSize({ParentCallback,size}) {
+export default function IconSize({ParentCallback,size}) {
 
 
     const handleChange =(e)=>{
@@ -11,7 +11,7 @@ export default function FontSize({ParentCallback,size}) {
   return (
     <div>
         <RangeStepInput
-                min={12} max={100}
+                min={50} max={300}
                 value={size} step={1}
                 onChange={handleChange}
             />

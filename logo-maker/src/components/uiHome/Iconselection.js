@@ -1,4 +1,5 @@
 import React from 'react'
+import GameIcons from './GameIcons';
 import Icongenerator from './Icongenerator';
 
 
@@ -27,24 +28,23 @@ export default function Iconselection() {
   "FaTeamspeak",
   "FaFemale",
   "FaGratipay",
-  "FaRaspberryPi",
-  "FaThermometerThreeQuarters",
-  "FaTaxi",
-  "FaTools",
-  "FaRegGem",
-  "FaGalacticRepublic",
-  "FaYinYang",
-  "FaRegSnowflake",
-  "FaRegFutbol",
-  "FaJedi",
-  "FaApple",
+  "FaRaspberryPi"
 ]
-  const listItems = iconnames.map((number) =>
-    <div className='svg_icon' key={number}><Icongenerator name={number} /></div>);
+
+const GI = [
+  "GiAk47"
+]
+
+  const listItems = iconnames.map((fa) =>
+    <div className='svg_icon' key={fa}><Icongenerator name={fa} /></div>);
+
+    const gamingItems = GI.map((gi)=>
+    <div className='svg_icon' key={gi}><GameIcons name={gi}/></div>)
 
   return (
     <div id='icon_main'>
           {listItems}
+          {gamingItems}
     </div>
   )
 }
