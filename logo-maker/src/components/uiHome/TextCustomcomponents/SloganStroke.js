@@ -25,12 +25,11 @@ export default function SloganStroke() {
   return (
     <div>
         <input type="checkbox" checked={sloganStroke} onChange={handleChange}/>
-        <label>Stroke</label> 
         {sloganStroke && 
             <div>
-                <button name='+' onClick={handleClick}>+</button>
-                <label>{sloganStrokeWidth}</label>
                 <button name='-' onClick={handleClick}>-</button>
+                <label className='label'>{sloganStrokeWidth}</label>
+                <button name='+' onClick={handleClick}>+</button>
                 <TextColor ParentCallback={callback} color={sloganStrokeColor} />
             </div>}
     </div>

@@ -27,7 +27,7 @@ export default function Position({handleposition,currentx,currenty,name}) {
         <button name='Up' className='Up ' onClick={handleClick}>Up</button>
         <br />
         <button name='Left' className='Left' onClick={handleClick}>Left</button>
-        <span>{name}</span>
+        <span className='position_span'>{name}</span>
         <button name='Right' className='Right' onClick={handleClick}>Right</button>
         <br />
         <button name='Down' className='Down'  onClick={handleClick}>Down</button>

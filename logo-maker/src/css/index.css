@@ -42,12 +42,55 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Boycott';
+    src: url('../fonts/BOYCOTT_-webfont.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Edo';
+    src: url('../fonts/edo-webfont.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Tusj';
+    src: url('../fonts/FFF_Tusj-webfont.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'frente';
+    src:url('../fonts/FrenteH1-Regular-webfont.woff') format('woff');   
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "JosefinSans";
+    src: url("../fonts/JosefinSans-Italic.woff");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Juice";
+    src: url("../fonts/JUICE_Italic-webfont.woff");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "TradeWinds";
+    src: url("../fonts/TradeWinds-Regular.woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
 *{
     margin: 0;
     padding: 0;
 }
 
 h1{
-    font-family: 'atomicage';
-    color: #EC449B;
+    font-family: 'JosefinSans';
+    color: #00bcd4;
 }

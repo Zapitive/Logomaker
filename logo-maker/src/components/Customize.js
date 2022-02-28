@@ -35,7 +35,7 @@ function Customize(){
                 <Position handleposition={positionChange} currentx={iconPosi.x} currenty={iconPosi.y} />
                 <h1>Icon Color:</h1>
                 <TextColor ParentCallback={colorChange} color={iconcolor}/>
-                <h1>Icon Size</h1>
+                <h1>Icon Size:</h1>
                 <IconSize ParentCallback={sizeChange} size={iconSize} />
                 <h1>Background Color:</h1>
                 <br />

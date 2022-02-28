@@ -43,12 +43,35 @@ export default function () {
         </div>
         
         {slogan && <>
-        <Position handleposition={positionChange} currentx={sloganPosi.x} currenty={sloganPosi.y} name={slogan}/>
+            <h1>Position:</h1>
+            <Position handleposition={positionChange} currentx={sloganPosi.x} currenty={sloganPosi.y} name={slogan}/>
+
+
+        <div className='flexbox'>
+        <h1>Color:</h1>
         <TextColor ParentCallback={callback} color={slogancolor}/>
-        <FontStyle ParentCallback={callbackfont} />
-        <FontSize ParentCallback={callbackSize} size={sloganSize}/>
-        <TextAngle ParentCallback={callbackAngle} angle={sloganAngle} />
-        <SloganStroke />
+        </div>
+        <div className='flexbox'>
+            <h1>Font Style:</h1>
+            <FontStyle ParentCallback={callbackfont} />
+        </div>
+        <div className='flexbox'>
+            <h1>Font Size:</h1>
+            <div className="slider">
+                <FontSize ParentCallback={callbackSize} size={sloganSize} />
+            </div> 
+        </div>
+        
+        <div className='flexbox'>
+            <h1>Angle:</h1>
+            <div className='slider'>
+                <TextAngle ParentCallback={callbackAngle} angle={sloganAngle} />
+            </div>
+        </div>
+        <div className='flexbox'>
+            <h1>Stoke :</h1>
+            <SloganStroke />
+        </div>
         </>
         }
     </div>

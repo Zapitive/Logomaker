@@ -8,6 +8,10 @@ export default function GameIcons({name}) {
 
     const reducer = (state,action) =>{
       switch(action.type){
+        case "hover":
+          return{color:"#00bcd4",fontSize:"70"}
+          case "hoverend":
+          return{color:"#FCEDDA",fontSize:"80"}
         default:
           return state
       }
@@ -16,9 +20,17 @@ export default function GameIcons({name}) {
     const onIconClick = ()=>{
       setIconname(name)
   }
+
+  const handleHover = (e) =>{
+    dispatch({type:"hover"})
+  }
+
+  const hoverEnd = ()=>{
+    dispatch({type:"hoverend"})
+  }
   
-    const [state,dispatch] = useReducer(reducer,{color:"#EED971FF",fontSize:"80"})
-    const icon = React.createElement(GI[name],{style: {fontSize: state.fontSize,color: state.color},onClick: onIconClick})
+    const [state,dispatch] = useReducer(reducer,{color:"#FCEDDA",fontSize:"80"})
+    const icon = React.createElement(GI[name],{style: {fontSize: state.fontSize,color: state.color},onClick: onIconClick,onMouseOver:handleHover , onMouseLeave:hoverEnd})
   
   
   
